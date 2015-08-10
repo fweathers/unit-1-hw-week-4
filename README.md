@@ -11,9 +11,9 @@ You may pick any categories that you want.
 
 This is a suggestion for how to organize your data.
 
-1. Each category is represented by a class. Each category class has 3 properties: name (NSString*), options (NSArray*), selection (NSString*)
-2. In your root `UITableViewController`, add a `property` that is an `NSArray` that can hold all of your category objects.
-3. In `prepareForSegue`, pass the category object to the other `UITableViewController`
+1. Each category is represented by a class, let's call it `CQCategory`. This class has 3 properties: name (NSString*), options (NSArray*), selection (NSString*)
+2. In your root `UITableViewController`, add a `property` that is an `NSArray` that can hold all of your `CQCategory` objects.
+3. In `prepareForSegue`, pass the corresponding `CQCategory` object to the destination `UITableViewController`
 
 ### Process
 1. Start simple. In your storyboard, drag out a `UINavigationController` with `UITableViewController` as the root view controller. Add an additional `UITableViewController`. Create a segue when the user taps on a cell in the first `UITableViewController`.
