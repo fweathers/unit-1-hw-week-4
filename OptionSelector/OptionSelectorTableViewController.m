@@ -8,7 +8,6 @@
 
 #import "OptionSelectorTableViewController.h"
 #import "OSDataTableViewController.h"
-#import "OSDetailTableViewController.h"
 
 @interface OptionSelectorTableViewController ()
 
@@ -22,7 +21,7 @@
     [super viewDidLoad];
     
     self.model = [[OSDataTableViewController alloc] init]; //when the view loads it will initialize a new instance of the model and storing it on the view controller
-    [self.model initializeData]; //initalizes the model's data
+    [self.model initializeListOfItems]; //initalizes the model's data
     
 }
 
@@ -47,15 +46,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    // Return the number of rows in the section.
-    return self.model.topicNames.count;
-}
+    
+        NSArray *keys = [self.model.topicNames allKeys];
+        NSString *key = [keys objectAtIndex:section];
+        NSArray *values = [self.model.topicNames objectForKey:key];
+    
+        return values.count;
+   }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"optionSelectorReuseIdentifier" forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.model.topicNames objectAtIndex: indexPath.row];
+    cell.textLabel.text = [self. objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -103,12 +106,11 @@
     NSLog(@"preparing...");
     
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+
+//    NSDictionary *itemsLists = [self.initializeListOfItems objectForIndexPath:indexPath];
+
     
-//    NSString *itemsList = [self objectForIndexPath:indexPath];
-    
-    
-    
-    OSDetailTableViewController *detailViewController = segue.destinationViewController;
+    OSDataTableViewController *detailViewController = segue.destinationViewController;
 
 }
 

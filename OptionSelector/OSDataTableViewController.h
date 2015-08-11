@@ -10,8 +10,8 @@
 
 @interface OSDataTableViewController : UITableViewController
 
-@property (nonatomic) NSArray *topicNames;
+@property (nonatomic) NSDictionary *topicNames;
 
-- (void)initializeData;
+- (void)initializeListOfItems;
 
 @end

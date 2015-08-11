@@ -14,19 +14,52 @@
 
 @implementation OSDataTableViewController
 
-- (void)initializeData {
+- (void)initializeListOfItems {
+    [self initializeTopicDetailsDictionary];
+}
+
+
+//- (void)initializeData {
+//    
+//    [self initializeTopicNamesArray];
+//    
+//}
+
+//- (void)initializeTopicNamesArray {
+//    
+//    self.topicNames = @[
+//                       @"Dogs",
+//                       @"Cars",
+//                       @"Food"];
+//}
+//
+- (void)initializeTopicDetailsDictionary {
+    NSArray *dogs = @[
+                      @"Pitbull",
+                      @"Poodle",
+                      @"Golden Retriever",
+                      @"Yorkshire Terrier",
+                      @"Boxer"
+                      ];
     
-    [self initializeTopicNamesArray];
+    NSArray *cars = @[
+                      @"Camaro",
+                      @"Mustang",
+                      @"Corvette",
+                      @"Mini Cooper",
+                      @"Cayenne"
+                      ];
+    
+    NSArray *food = @[
+                      @"Pasta",
+                      @"Salad",
+                      @"Pizza",
+                      @"Chicken",
+                      @"Lobster",
+                      ];
     
 }
 
-- (void)initializeTopicNamesArray {
-    
-    self.topicNames = @[
-                       @"Dogs",
-                       @"Cars",
-                       @"Food"];
-}
 
 
 @end
