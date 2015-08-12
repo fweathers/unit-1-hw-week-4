@@ -13,6 +13,11 @@
 @end
 
 @implementation OSDataTableViewController
+- (void)viewDidLoad {
+    NSLog(@"data load");
+    [self initializeListOfItems];
+    NSLog(@"%@", self.topicNames);
+}
 
 - (void)initializeListOfItems {
     [self initializeTopicDetailsDictionary];
@@ -58,7 +63,15 @@
                       @"Lobster",
                       ];
     
+    
+    self.topicNames = @{
+                        @"dogs" : dogs,
+                        @"cars" : cars,
+                        @"food" : food
+                        };
 }
+
+
 
 
 

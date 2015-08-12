@@ -41,28 +41,29 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
+//    return [self.model.topicNames allKeys].count;
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     
-        NSArray *keys = [self.model.topicNames allKeys];
-        NSString *key = [keys objectAtIndex:section];
-        NSArray *values = [self.model.topicNames objectForKey:key];
+    NSArray *keys = [self.model.topicNames allKeys];
     
-        return values.count;
+    return keys.count;
    }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"optionSelectorReuseIdentifier" forIndexPath:indexPath];
+
+    NSArray *keys = [self.model.topicNames allKeys];
+  
+    cell.textLabel.text = [keys objectAtIndex:indexPath.row];
+
     
-    cell.textLabel.text = [self. objectAtIndex:indexPath.row];
-    
+
     return cell;
 }
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -103,16 +104,24 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+    OSDataTableViewController *data = segue.destinationViewController;
+    
     NSLog(@"preparing...");
-    
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-
-//    NSDictionary *itemsLists = [self.initializeListOfItems objectForIndexPath:indexPath];
-
-    
-    OSDataTableViewController *detailViewController = segue.destinationViewController;
-
+   
+    if ([segue.identifier isEqualToString:@"optionSelectorReuseIdentifier"]) {
+       
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        
+        
+    }
 }
-
+/*
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

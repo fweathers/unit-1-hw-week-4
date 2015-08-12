@@ -12,6 +12,8 @@
 
 @property (nonatomic) NSDictionary *topicNames;
 
+@property (nonatomic) NSString *topic;
+
 - (void)initializeListOfItems;
 
 @end
