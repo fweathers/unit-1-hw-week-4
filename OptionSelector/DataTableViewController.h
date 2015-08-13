@@ -10,5 +10,6 @@
 
 @interface DataTableViewController : UITableViewController
     
+@property (nonatomic)NSArray *categoryTopics;
 
 @end

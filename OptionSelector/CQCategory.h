@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Mike Kavouras. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface CQCategory : NSObject
 
