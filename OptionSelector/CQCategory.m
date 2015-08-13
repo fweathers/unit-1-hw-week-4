@@ -1,69 +1,57 @@
 //
-//  OptionSelectorTableViewController.m
+//  CQCategory.m
 //  OptionSelector
 //
-//  Created by Felicia Weathers on 8/10/15.
+//  Created by Felicia Weathers on 8/13/15.
 //  Copyright (c) 2015 Mike Kavouras. All rights reserved.
 //
 
-#import "OptionSelectorTableViewController.h"
-#import "OSDataTableViewController.h"
+#import "CQCategory.h"
 
-@interface OptionSelectorTableViewController ()
-
-@property (nonatomic) OSDataTableViewController *model;
+@interface CQCategory ()
 
 @end
 
-@implementation OptionSelectorTableViewController
+@implementation CQCategory
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+ //   [super viewDidLoad];
     
-    self.model = [[OSDataTableViewController alloc] init]; //when the view loads it will initialize a new instance of the model and storing it on the view controller
-    [self.model initializeListOfItems]; //initalizes the model's data
-    
-}
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-
+}
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+ //   [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-//    return [self.model.topicNames allKeys].count;
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 0;
+}
 
-    
-    NSArray *keys = [self.model.topicNames allKeys];
-    
-    return keys.count;
-   }
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"optionSelectorReuseIdentifier" forIndexPath:indexPath];
-
-    NSArray *keys = [self.model.topicNames allKeys];
-  
-    cell.textLabel.text = [keys objectAtIndex:indexPath.row];
-
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-
+    // Configure the cell...
+    
     return cell;
 }
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -99,32 +87,10 @@
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
-//    OSDataTableViewController *data = segue.destinationViewController;
-//    
-//    NSLog(@"preparing...");
-//   
-//    if ([segue.identifier isEqualToString:@"optionSelectorReuseIdentifier"]) {
-//       
-//        
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    
-        
-        
-//    }
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    id object = self.model.topicNames[indexPath.row];
-    DetailViewController *viewController = segue.destinationViewController;
-    viewController.object = object;
-    }
-   
-}
-/*
+// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
