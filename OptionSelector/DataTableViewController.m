@@ -42,5 +42,15 @@
     return self.categoryTopics.count;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OptionSelectorIdentifier" forIndexPath:indexPath];
+    
+    //prints topic names in cell
+    CQCategory *categoryTopics = self.categoryTopics[indexPath.row];
+    cell.textLabel.text = categoryTopics.name;
+    
+    
+    return cell;
+}
 
 @end
