@@ -8,6 +8,8 @@
 
 #import "DataTableViewController.h"
 #import "CQCategory.h"
+#import "SelectorTableViewController.h"
+
 @interface DataTableViewController ()
 
 @end
@@ -49,8 +51,21 @@
     CQCategory *categoryTopics = self.categoryTopics[indexPath.row];
     cell.textLabel.text = categoryTopics.name;
     
+    cell.detailTextLabel.text = categoryTopics.selection;
     
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    CQCategory *categoryTopic = self.categoryTopics[indexPath.row];
+    
+    SelectorTableViewController *vc = segue.destinationViewController;
+    vc.optionChosen = categoryTopic;
+    
+    
+
 }
 
 @end

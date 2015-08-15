@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		008677BD1B7D005000461BC8 /* CQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 008677BC1B7D005000461BC8 /* CQCategory.m */; };
 		008677C01B7D068200461BC8 /* DataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 008677BF1B7D068200461BC8 /* DataTableViewController.m */; };
+		00A039F51B7E8D48009E6D13 /* SelectorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A039F41B7E8D48009E6D13 /* SelectorTableViewController.m */; };
 		8DECE7921B78082B0064D760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7911B78082B0064D760 /* main.m */; };
 		8DECE7951B78082B0064D760 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DECE7941B78082B0064D760 /* AppDelegate.m */; };
 		8DECE79B1B78082B0064D760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DECE7991B78082B0064D760 /* Main.storyboard */; };
@@ -32,6 +33,8 @@
 		008677BC1B7D005000461BC8 /* CQCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQCategory.m; sourceTree = "<group>"; };
 		008677BE1B7D068200461BC8 /* DataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewController.h; sourceTree = "<group>"; };
 		008677BF1B7D068200461BC8 /* DataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewController.m; sourceTree = "<group>"; };
+		00A039F31B7E8D48009E6D13 /* SelectorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectorTableViewController.h; sourceTree = "<group>"; };
+		00A039F41B7E8D48009E6D13 /* SelectorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectorTableViewController.m; sourceTree = "<group>"; };
 		8DECE78C1B78082B0064D760 /* OptionSelector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptionSelector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DECE7901B78082B0064D760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DECE7911B78082B0064D760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				008677BC1B7D005000461BC8 /* CQCategory.m */,
 				008677BE1B7D068200461BC8 /* DataTableViewController.h */,
 				008677BF1B7D068200461BC8 /* DataTableViewController.m */,
+				00A039F31B7E8D48009E6D13 /* SelectorTableViewController.h */,
+				00A039F41B7E8D48009E6D13 /* SelectorTableViewController.m */,
 				8DECE7991B78082B0064D760 /* Main.storyboard */,
 				8DECE79C1B78082B0064D760 /* Images.xcassets */,
 				8DECE79E1B78082B0064D760 /* LaunchScreen.xib */,
@@ -225,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DECE7951B78082B0064D760 /* AppDelegate.m in Sources */,
+				00A039F51B7E8D48009E6D13 /* SelectorTableViewController.m in Sources */,
 				008677C01B7D068200461BC8 /* DataTableViewController.m in Sources */,
 				008677BD1B7D005000461BC8 /* CQCategory.m in Sources */,
 				8DECE7921B78082B0064D760 /* main.m in Sources */,

@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="791" y="233"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Selector Table View Controller-->
         <scene sceneID="Ssw-kN-Cj2">
             <objects>
-                <tableViewController id="cl5-Yy-4sc" sceneMemberID="viewController">
+                <tableViewController id="cl5-Yy-4sc" customClass="SelectorTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kwL-mq-gDf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

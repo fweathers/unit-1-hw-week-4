@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CQCategory.h"  
+#import "DataTableViewController.h"
 
 @interface DataTableViewController : UITableViewController
     
