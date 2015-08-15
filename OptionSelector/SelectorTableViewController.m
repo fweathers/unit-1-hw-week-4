@@ -8,6 +8,7 @@
 
 #import "SelectorTableViewController.h"
 
+
 @interface SelectorTableViewController ()
 
 @end
@@ -48,7 +49,7 @@
     NSString *itemChoice = self.optionChosen.options[indexPath.row];
     cell.textLabel.text = itemChoice;
     
-    if (self.optionChosen[indexPath.row] == self.optionChosen.selection){
+    if (self.optionChosen.options[indexPath.row] == self.optionChosen.selection){
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
         
     } else {

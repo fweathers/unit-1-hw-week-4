@@ -20,18 +20,30 @@
     [super viewDidLoad];
 
     CQCategory *dogs = [[CQCategory alloc]init];
+    
     dogs.name = @"Dogs";
-    dogs.options = @[@"Golden Retriever", @"Siberian Husky", @"Chihuahua", @"German Shepherd"];
+    dogs.options = @[@"Golden Retriever",
+                     @"Siberian Husky",
+                     @"Chihuahua",
+                     @"German Shepherd"];
     
     CQCategory *foods = [[CQCategory alloc]init];
+    
     foods.name = @"Name";
-    foods.options = @[@"Salami and Cheese", @"Chicken and Rice", @"Spaghetti and Meatball",@"Drunk Man Noodles"];
+    foods.options = @[@"Salami and Cheese",
+                      @"Chicken and Rice",
+                      @"Spaghetti and Meatball",
+                      @"Drunk Man Noodles"];
     
     CQCategory *cars = [[CQCategory alloc]init];
-    cars.name = @"Cars";
-    foods.options = @[@"Porsche Cayenne", @"Hyundai Genesis", @"Nissan GT-R"];
     
-    NSArray *categoryTopics = [[NSArray alloc]init];
+    cars.name = @"Cars";
+    foods.options = @[@"Porsche Cayenne",
+                      @"Hyundai Genesis",
+                      @"Nissan GT-R"];
+
+//Natalia Removed the line below and it removed an error.
+//    NSArray *categoryTopics = [[NSArray alloc]init];
     self.categoryTopics = @[dogs, foods, cars];
     
 }
