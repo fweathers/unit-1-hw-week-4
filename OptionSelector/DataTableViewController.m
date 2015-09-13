@@ -29,7 +29,7 @@
     
     CQCategory *foods = [[CQCategory alloc]init];
     
-    foods.name = @"Name";
+    foods.name = @"Food";
     foods.options = @[@"Salami and Cheese",
                       @"Chicken and Rice",
                       @"Spaghetti and Meatball",
@@ -38,11 +38,11 @@
     CQCategory *cars = [[CQCategory alloc]init];
     
     cars.name = @"Cars";
-    foods.options = @[@"Porsche Cayenne",
+    cars.options = @[@"Porsche Cayenne",
                       @"Hyundai Genesis",
                       @"Nissan GT-R"];
 
-//Natalia Removed the line below and it removed an error.
+
 //    NSArray *categoryTopics = [[NSArray alloc]init];
     self.categoryTopics = @[dogs, foods, cars];
     
