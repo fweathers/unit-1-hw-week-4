@@ -9,12 +9,20 @@
 #import "DataTableViewController.h"
 #import "CQCategory.h"
 #import "SelectorTableViewController.h"
+#import "OSOptionSelectedDelegate.h"
 
 @interface DataTableViewController ()
+
+@property (nonatomic)CQCategory *optionSelected;
 
 @end
 
 @implementation DataTableViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData]; // to reload selected cell
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,7 +34,7 @@
                      @"Siberian Husky",
                      @"Chihuahua",
                      @"German Shepherd"];
-    dogs.selection = @" ";
+//    dogs.selection = @" ";
     
     CQCategory *foods = [[CQCategory alloc]init];
     
@@ -35,7 +43,7 @@
                       @"Chicken and Rice",
                       @"Spaghetti and Meatball",
                       @"Drunk Man Noodles"];
-    foods.selection = @" ";
+//    foods.selection = @" ";
     
     CQCategory *cars = [[CQCategory alloc]init];
     
@@ -43,7 +51,7 @@
     cars.options = @[@"Porsche Cayenne",
                       @"Hyundai Genesis",
                       @"Nissan GT-R"];
-    cars.selection = @" ";
+//    cars.selection = @" ";
 
     self.categoryTopics = @[dogs, foods, cars];
 
@@ -64,10 +72,22 @@
     CQCategory *categoryTopics = self.categoryTopics[indexPath.row];
     cell.textLabel.text = categoryTopics.name;
     
-    cell.detailTextLabel.text = categoryTopics.optionChosen;
+   // CQCategory *optionSelected = self.categoryTopics.;
+    cell.detailTextLabel.text = categoryTopics.selection;
+    
+    NSLog(@"%@", categoryTopics.selection);
     
     return cell;
 }
+
+//-(void)selectorTableViewController:(SelectorTableViewController *)tableViewController didSelectAnOption:(NSUInteger)cellIndex {
+//    
+//    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//    CQCategory *category = self.categoryTopics[indexPath.row];
+//    [category setSelection:category.options[cellIndex]];
+//    NSLog(@"%@", category.options[cellIndex]);
+//}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
