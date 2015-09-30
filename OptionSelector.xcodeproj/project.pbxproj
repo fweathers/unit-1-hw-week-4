@@ -33,7 +33,6 @@
 		008677BC1B7D005000461BC8 /* CQCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQCategory.m; sourceTree = "<group>"; };
 		008677BE1B7D068200461BC8 /* DataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewController.h; sourceTree = "<group>"; };
 		008677BF1B7D068200461BC8 /* DataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewController.m; sourceTree = "<group>"; };
-		0088FAB21BBC96EB007C5F87 /* OSOptionSelectedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSOptionSelectedDelegate.h; sourceTree = "<group>"; };
 		00A039F31B7E8D48009E6D13 /* SelectorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectorTableViewController.h; sourceTree = "<group>"; };
 		00A039F41B7E8D48009E6D13 /* SelectorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectorTableViewController.m; sourceTree = "<group>"; };
 		8DECE78C1B78082B0064D760 /* OptionSelector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptionSelector.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,7 +95,6 @@
 				008677BF1B7D068200461BC8 /* DataTableViewController.m */,
 				00A039F31B7E8D48009E6D13 /* SelectorTableViewController.h */,
 				00A039F41B7E8D48009E6D13 /* SelectorTableViewController.m */,
-				0088FAB21BBC96EB007C5F87 /* OSOptionSelectedDelegate.h */,
 				8DECE7991B78082B0064D760 /* Main.storyboard */,
 				8DECE79C1B78082B0064D760 /* Images.xcassets */,
 				8DECE79E1B78082B0064D760 /* LaunchScreen.xib */,

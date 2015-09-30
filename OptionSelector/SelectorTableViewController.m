@@ -7,7 +7,6 @@
 //
 
 #import "SelectorTableViewController.h"
-#import "OSOptionSelectedDelegate.h"
 
 @interface SelectorTableViewController ()
 
@@ -20,13 +19,7 @@
     
 }
 
-//-(void)selectorTableViewController:(SelectorTableViewController *)tableViewController didSelectAnOption:(NSUInteger)cellIndex {
-//    
-//    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//    CQCategory *category = self.categoryTopics[indexPath.row];
-//    [category setSelection:category.choices[cellIndex]];
-//    NSLog(@"%@", category.choices[cellIndex]);
-//}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
