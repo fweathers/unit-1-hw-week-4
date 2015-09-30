@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SelectorTableViewController.h"
 #import "CQCategory.h"  
 #import "DataTableViewController.h"
 

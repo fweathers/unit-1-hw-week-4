@@ -26,6 +26,7 @@
                      @"Siberian Husky",
                      @"Chihuahua",
                      @"German Shepherd"];
+    dogs.selection = @" ";
     
     CQCategory *foods = [[CQCategory alloc]init];
     
@@ -34,6 +35,7 @@
                       @"Chicken and Rice",
                       @"Spaghetti and Meatball",
                       @"Drunk Man Noodles"];
+    foods.selection = @" ";
     
     CQCategory *cars = [[CQCategory alloc]init];
     
@@ -41,11 +43,10 @@
     cars.options = @[@"Porsche Cayenne",
                       @"Hyundai Genesis",
                       @"Nissan GT-R"];
+    cars.selection = @" ";
 
-
-//    NSArray *categoryTopics = [[NSArray alloc]init];
     self.categoryTopics = @[dogs, foods, cars];
-    
+
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -63,7 +64,7 @@
     CQCategory *categoryTopics = self.categoryTopics[indexPath.row];
     cell.textLabel.text = categoryTopics.name;
     
-    cell.detailTextLabel.text = categoryTopics.selection;
+    cell.detailTextLabel.text = categoryTopics.optionChosen;
     
     return cell;
 }
@@ -71,12 +72,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    
     CQCategory *categoryTopic = self.categoryTopics[indexPath.row];
     
     SelectorTableViewController *vc = segue.destinationViewController;
     vc.optionChosen = categoryTopic;
-    
-    
 
 }
 
